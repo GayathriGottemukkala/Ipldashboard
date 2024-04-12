@@ -1,0 +1,97 @@
+.latest-match-details-container {
+    background-color: #0f172a;
+    padding: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .latest-first-container {
+    width: 50%;
+  }
+  .latest-third-container {
+    width: 33%;
+  }
+  
+  .sm-width {
+    width: 67%;
+  }
+  
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .latest-logo {
+    width: 195px;
+  }
+  
+  .latest-data-heading {
+    color: #ffffff;
+    font-size: 43px;
+    font-weight: 500;
+    font-family: 'Bree Serif';
+  }
+  
+  .latest-date {
+    font-size: 28px;
+  }
+  
+  .latest-text {
+    font-size: 18px;
+  }
+  
+  .latest-text-right {
+    text-align: right;
+  }
+  
+  .hr-line {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .latest-match-details-container {
+      padding: 0;
+      display: block;
+    }
+    .sm-width {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 12px;
+    }
+    .latest-first-container {
+      padding: 18px;
+      width: 80%;
+    }
+    .latest-second-container {
+      width: 20%;
+    }
+    .latest-third-container {
+      width: 100%;
+    }
+    .latest-logo {
+      width: 98px;
+      padding: 15px;
+    }
+    .latest-data-heading {
+      font-size: 28px;
+    }
+    .latest-date {
+      font-size: 23px;
+    }
+    .latest-text {
+      font-size: 15px;
+    }
+    .latest-text-right {
+      text-align: left;
+    }
+    .hr-line {
+      display: block;
+      border-style: solid;
+      color: #475569;
+    }
+  }
