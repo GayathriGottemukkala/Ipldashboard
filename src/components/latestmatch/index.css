@@ -6,11 +6,10 @@
     align-items: center;
     border-radius: 8px;
     flex-wrap: wrap;
+    gap: 30px;
   }
   
-  .latest-first-container {
-    width: 50%;
-  }
+
   .latest-third-container {
     width: 33%;
   }

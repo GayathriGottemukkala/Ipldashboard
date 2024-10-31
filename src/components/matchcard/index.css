@@ -11,6 +11,15 @@
     padding-right: 16px;
     margin-bottom: 24px;
   }
+  .match-card-list{
+    background-color: #e93b3b;
+    padding: 14px;
+    border-radius: 21px;
+  }
+  .match-card-img{
+    width:200px !important;
+    height: 205px;
+  }
   
   @media screen and (min-width: 768px) {
     .match-item {

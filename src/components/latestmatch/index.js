@@ -1,7 +1,7 @@
-import './index.css'
+import './index.css';
 
 const LatestMatch = props => {
-  const {latestMatchDetails} = props
+  const { latestMatchDetails } = props;
 
   const {
     competingTeam,
@@ -13,56 +13,48 @@ const LatestMatch = props => {
     secondInnings,
     manOfTheMatch,
     umpires,
-  } = latestMatchDetails
-
-  console.log(latestMatchDetails)
+  } = latestMatchDetails;
 
   return (
     <div className="latest-match-details-container">
       <div className="sm-width latest-match-details-container">
         <div className="latest-first-container">
+       
           <p className="latest-data-heading">{competingTeam}</p>
           <p className="latest-data-heading latest-date">{date}</p>
           <p className="latest-data-heading latest-text">{venue}</p>
           <p className="latest-data-heading latest-text">{result}</p>
+          
         </div>
         <div className="img-container latest-first-container latest-second-container">
           <img
             src={competingTeamLogo}
-            alt={`latest match ${competingTeam}`}
+            alt={`Latest match between ${competingTeam}`}
             className="latest-logo"
           />
         </div>
-      </div>
+      
       <hr className="hr-line" />
       <div className="latest-first-container latest-third-container">
-        <p className="latest-data-heading latest-text latest-text-right">
-          First Innings
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          {firstInnings}
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          Second Innings
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          {secondInnings}
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          Man Of The Match
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          {manOfTheMatch}
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          Umpires
-        </p>
-        <p className="latest-data-heading latest-text latest-text-right">
-          {umpires}
-        </p>
+        <MatchDetail label="First Innings" detail={firstInnings} />
+        <MatchDetail label="Second Innings" detail={secondInnings} />
+        <MatchDetail label="Man Of The Match" detail={manOfTheMatch} />
+        <MatchDetail label="Umpires" detail={umpires} />
+      </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LatestMatch
+const MatchDetail = ({ label, detail }) => (
+  <>
+    <p className="latest-data-heading latest-text latest-text-right">
+      {label}
+    </p>
+    <p className="latest-data-heading latest-text latest-text-right">
+      {detail}
+    </p>
+  </>
+);
+
+export default LatestMatch;
